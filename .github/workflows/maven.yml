@@ -2,7 +2,7 @@ name: CTSE-Microservices-CI/CD-Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   PROJECT_ID: extra-project-350516
