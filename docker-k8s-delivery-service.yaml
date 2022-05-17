@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-delivery-service-deployment
+  labels:
+    app: docker-k8s-delivery-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-k8s-delivery-service
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-delivery-service
+    spec:
+      containers:
+      - name: docker-k8s-delivery-service
+        image: himantha98/delivery-service
+        ports:
+        - containerPort: 9095
